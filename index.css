@@ -1,0 +1,15 @@
+body {
+  background: linear-gradient(to left top, #394f73, #acb3bf);
+  color: white;
+  display: flex;
+  height: 100vh;
+}
+
+h1 {
+  flex: 1;
+  font-family: Georgia;
+  font-size: 60px;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 4px 4px #4d4c4ca1;
+}
