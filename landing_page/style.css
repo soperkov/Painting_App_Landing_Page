@@ -292,6 +292,11 @@ h1 {
   text-decoration: underline;
 }
 
+.footer nav a.active {
+  text-decoration: underline;
+  color: #333;
+}
+
 .footer .social-media {
   margin-top: 20px;
 }
