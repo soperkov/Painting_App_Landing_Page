@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INK MUSE</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="homeScript.js"></script>
   </head>
   <body>
     <header class="header">
@@ -16,13 +17,13 @@
       <p>
         Explore endless possibilities and create stunning artworks effortlessly.
       </p>
-      <a href="#download" class="cta-button">Download Now</a>
+      <a href="#download" id="downloadBtn" class="cta-button">Download Now</a>
     </header>
 
     <section class="features container">
       <h2>Features</h2>
       <div class="feature">
-        <img src="intuitive-interface.png" alt="Intuitive Interface" />
+        <img src="/Photos/intuitive-interface.jpg" alt="Intuitive Interface" />
         <h3>Intuitive Interface</h3>
         <p>
           Easily navigate through a user-friendly interface designed for artists
@@ -30,7 +31,7 @@
         </p>
       </div>
       <div class="feature">
-        <img src="advanced-tools.png" alt="Advanced Tools" />
+        <img src="/Photos/Color-palette-3.jpg" alt="Advanced Tools" />
         <h3>Advanced Tools</h3>
         <p>
           Access a wide range of brushes, colors, and effects to bring your
@@ -38,7 +39,7 @@
         </p>
       </div>
       <div class="feature">
-        <img src="community-sharing.png" alt="Community Sharing" />
+        <img src="/Photos/community-sharing.jpg" alt="Community Sharing" />
         <h3>Community Sharing</h3>
         <p>
           Share your creations with a vibrant community of artists and get
@@ -57,17 +58,54 @@
         "I love the variety of tools available. It's perfect for both beginners
         and professionals." - Jeff Bezos
       </blockquote>
+      <blockquote>
+        "The interface is clean and user-friendly. I can easily find all the
+        features I need." - Sarah Johnson
+      </blockquote>
+      <blockquote>
+        "Fantastic app! The cloud sync feature ensures I never lose my work." -
+        Michael Brown
+      </blockquote>
     </section>
 
     <section class="gallery container">
       <h2>Discover Our Artists' Creations</h2>
-      <div class="gallery-grid">
-        <img src="/Photos/Drawing-1.png" alt="Artwork 1" />
-        <img src="/Photos/Drawing-3.png" alt="Artwork 2" />
-        <img src="/Photos/Image.jfif" alt="Artwork 3" />
-        <img src="/Photos/Drawing-4.jpg" alt="Artwork 4" />
-      </div>
-      <a href="#gallery" class="view-more">View More</a>
+      <section id="gallery-default">
+        <div class="gallery-grid">
+          <img src="/Photos/Drawing-1.png" alt="Artwork 1" />
+          <img src="/Photos/Drawing-3.png" alt="Artwork 2" />
+          <img src="/Photos/Image.jfif" alt="Artwork 3" />
+          <img src="/Photos/Drawing-4.jpg" alt="Artwork 4" />
+        </div>
+        <button class="view-more" id="view-more-button">View More</button>
+      </section>
+      <section class="gallery-grid hidden" id="gallery-more">
+        <div class="gallery-grid">
+          <img src="/Photos/Drawing-1.png" alt="Artwork 1" />
+          <img src="/Photos/Drawing-3.png" alt="Artwork 2" />
+          <img src="/Photos/Image.jfif" alt="Artwork 3" />
+          <img src="/Photos/Drawing-4.jpg" alt="Artwork 4" />
+          <img src="/Photos/special1.jfif" alt="Special Artwork 1" />
+          <img src="/Photos/special2.jfif" alt="Special Artwork 2" />
+          <img src="/Photos/special3.jfif" alt="Special Artwork 3" />
+          <img src="/Photos/special4.jfif" alt="Special Artwork 4" />
+          <img src="/Photos/special5.jfif" alt="Special Artwork 5" />
+          <img src="/Photos/special6.jfif" alt="Special Artwork 6" />
+          <img src="/Photos/special7.jfif" alt="Special Artwork 7" />
+          <img src="/Photos/special8.jfif" alt="Special Artwork 8" />
+          <img src="/Photos/special9.jfif" alt="Special Artwork 9" />
+          <img src="/Photos/special10.jfif" alt="Special Artwork 10" />
+          <img src="/Photos/special11.jfif" alt="Special Artwork 11" />
+          <img src="/Photos/special12.jfif" alt="Special Artwork 12" />
+          <img src="/Photos/special13.jfif" alt="Special Artwork 13" />
+          <img src="/Photos/special14.jfif" alt="Special Artwork 14" />
+          <img src="/Photos/special15.jfif" alt="Special Artwork 15" />
+          <img src="/Photos/special16.jfif" alt="Special Artwork 16" />
+        </div>
+        <button class="view-less hidden" id="view-less-button">
+          View Less
+        </button>
+      </section>
     </section>
 
     <section class="how-it-works container">
@@ -75,7 +113,6 @@
       <div class="step">
         <h3>Step 1: Download the App</h3>
         <p>Available on iOS and Android.</p>
-        <img src="download-buttons.png" alt="Download Buttons" />
       </div>
       <div class="step">
         <h3>Step 2: Create Your Masterpiece</h3>
@@ -166,25 +203,25 @@
     <footer class="footer">
       <nav>
         <a class="active">Home</a>
-        <a href="/landing_page/about.html">About</a>
+        <a href="about.html">About</a>
         <a href="pricing_contact.html">Pricing and Contact</a>
       </nav>
       <div class="social-media">
-        <a href="https://facebook.com" target="_blank"
-          ><img src="../Photos/facebook-icon3.png" alt="Facebook"
-        /></a>
-        <a href="https://instagram.com" target="_blank"
-          ><img src="../Photos/instagram-icon3.PNG" alt="Instagram"
-        /></a>
-        <a href="https://twitter.com" target="_blank"
-          ><img src="../Photos/twitter-icon3.PNG" alt="Twitter"
-        /></a>
-        <a href="https://pinterest.com" target="_blank"
-          ><img src="../Photos/pinterest-icon.PNG" alt="Pinterest"
-        /></a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="../Photos/facebook-icon3.png" alt="Facebook" />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="../Photos/instagram-icon3.PNG" alt="Instagram" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="../Photos/twitter-icon3.PNG" alt="Twitter" />
+        </a>
+        <a href="https://pinterest.com" target="_blank">
+          <img src="../Photos/pinterest-icon.PNG" alt="Pinterest" />
+        </a>
       </div>
       <div class="contact-info">
-        <p>Email: support@inkmuse.com</p>
+        <p>Email: support@paintingapp.com</p>
         <p>Phone: (123) 456-7890</p>
       </div>
     </footer>
