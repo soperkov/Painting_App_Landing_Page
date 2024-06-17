@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   downloadButton.addEventListener("click", function () {
     const link = document.createElement("a");
     link.href = "/Photos/hand-meme.jpg";
-    link.download = "hand-meme.jpg";
+    link.download = "ink-muse.jpg";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
