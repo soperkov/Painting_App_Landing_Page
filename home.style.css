@@ -5,7 +5,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 body {
@@ -51,20 +51,6 @@ h1 {
   color: #e3b603;
 }
 
-.header .cta-button {
-  background-color: #2f2e2c;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  text-shadow: 3px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.header .cta-button:hover {
-  background-color: #a0892f;
-}
-
 .features {
   padding: 50px 20px;
   background: linear-gradient(to right, #242422, #2f2e2c);
@@ -83,6 +69,56 @@ h1 {
   width: 30%;
   margin: 0 10px;
   vertical-align: top;
+}
+
+.cta-button,
+.view-less,
+.view-more {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(
+    rgba(47, 46, 44, 0.84),
+    rgba(160, 137, 47, 0.84) 50%
+  );
+  border-radius: 5px;
+  border-width: 0;
+  box-shadow: rgba(47, 46, 44, 0.24) 0 2px 2px,
+    rgba(160, 137, 47, 0.4) 0 8px 12px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(47, 46, 44, 0.6) 1px 1px 4px,
+    rgba(47, 46, 44, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.view-more {
+  margin-top: 20px;
+}
+
+.cta-button:hover,
+.view-less:hover,
+.view-more:hover {
+  background-image: linear-gradient(#a0892f, #2f2e2c 80%);
+}
+
+@media (min-width: 768px) {
+  .button-72 {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
 }
 
 .features .feature img {
@@ -148,22 +184,6 @@ h1 {
   width: 20%;
   height: 20%;
   border-radius: 10px;
-}
-
-.view-more,
-.view-less {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #2f2e2c;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.view-more:hover,
-.view-less:hover {
-  background-color: #e3b603;
 }
 
 .how-it-works {
@@ -288,7 +308,7 @@ h1 {
   color: #fff;
   text-align: center;
   width: 100vw;
-  box-sizing: border-box; /* Ensure padding is included in width */
+  box-sizing: border-box;
 }
 
 .footer nav a {
