@@ -32,3 +32,24 @@ function showDefaultHideAdditional() {
   viewLessButton.classList.add("hidden");
   viewMoreButton.classList.remove("hidden");
 }
+
+fetch("https://images-api.anmal.dev/images")
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((item) => {
+      const imageElement = document.createElement("img");
+      imageElement.src = item.image;
+      imageElement.alt = item.name;
+      document.querySelector("#gallery-expand").appendChild(imageElement);
+      if (item.id < 5) {
+        const imageElement = document.createElement("img");
+        imageElement.src = item.image;
+        imageElement.alt = item.name;
+        document.querySelector("#default-gallery").appendChild(imageElement);
+      }
+    });
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("Error: ", error);
+  });

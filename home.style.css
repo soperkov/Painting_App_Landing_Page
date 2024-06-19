@@ -186,6 +186,22 @@ h1 {
   border-radius: 10px;
 }
 
+#gallery-expand,
+#default-gallery {
+  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#gallery-expand img,
+#default-gallery img {
+  width: 20%;
+  height: 20%;
+  border-radius: 10px;
+}
+
 .how-it-works {
   padding: 50px 20px;
   background: linear-gradient(to right, #242422, #2f2e2c);
